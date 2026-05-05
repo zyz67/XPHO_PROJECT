@@ -24,7 +24,7 @@ Consider the tether system initially moving in a stable circular orbit of radius
 
 **A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Calculate the magnitude of this EMF, $\mathcal{E}$, as a function of $r$, $L$, and the given planetary constants. **[1.0 pt]**
 
-**A.3.** Determine the polarity of the induced EMF. Which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
+**A.3.** Assume the satellite's orbital direction is the same as the planet's rotation. Determine the polarity of the induced EMF. Which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
 
 ---
 
@@ -48,9 +48,9 @@ In a realistic scenario, the current $I$ is limited by the ability of the tether
 *   Stefan-Boltzmann Law: The power radiated by a surface area $S$ with emissivity $\epsilon$ at temperature $T$ is $P_{rad} = \epsilon \sigma S T^4$, where $\sigma$ is the Stefan-Boltzmann constant.
 *   Richardson’s Law for thermionic emission: The saturation current $I$ emitted by a surface $S_{emit}$ at temperature $T$ is given by $I = S_{emit} A_R T^2 \exp\left(-\frac{\Phi}{k_B T}\right)$, where $A_R$ is Richardson's constant and $\Phi$ is the work function.
 
-**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and the local EMF $\mathcal{E}$. **[1.2 pt]**
+**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$), the constants $e$ and $k_B$, and the local EMF $\mathcal{E}$. **[1.2 pt]**
 
-**C.2.** Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \gg I\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \epsilon, R, L$), the satellites' mass $m$, and the local orbital parameters ($B, v, r$). **[1.8 pt]**
+**C.2.** Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \gg I\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of $B, L, r, m, R$. **[1.8 pt]**
 
 # QuestionReview
 ### [1] Final Assessment Conclusion
@@ -451,4 +451,3 @@ if __name__ == "__main__":
     generate_figure_2()
     print("All figures generated for IPhO Problem 1.")
 ```
-
